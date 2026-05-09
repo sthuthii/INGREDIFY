@@ -1,0 +1,27 @@
+# Web framework
+fastapi==0.109.2
+uvicorn[standard]==0.27.1
+
+# Auth
+firebase-admin==6.4.0
+
+# OCR & Computer Vision
+easyocr==1.7.1
+opencv-python-headless==4.9.0.80
+Pillow==10.2.0
+
+# File handling
+python-multipart==0.0.9
+aiofiles==23.2.1
+
+# Utilities
+pydantic==2.6.1
+pydantic-settings==2.1.0
+python-dotenv==1.0.1
+tenacity==8.2.3
+
+# Rate limiting
+slowapi==0.1.9
+
+# HTTP client
+httpx==0.26.0
