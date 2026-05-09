@@ -7,7 +7,6 @@ const monorepoRoot = path.resolve(projectRoot, '..')
 
 const config = getDefaultConfig(projectRoot)
 
-// Allow Metro to resolve packages from the monorepo root node_modules
 config.watchFolders = [monorepoRoot]
 
 config.resolver.nodeModulesPaths = [
@@ -15,7 +14,6 @@ config.resolver.nodeModulesPaths = [
   path.resolve(monorepoRoot, 'node_modules'),
 ]
 
-// Resolve the @ingredify/shared workspace package
 config.resolver.extraNodeModules = {
   '@ingredify/shared': path.resolve(monorepoRoot, 'shared'),
 }

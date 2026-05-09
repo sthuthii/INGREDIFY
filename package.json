@@ -4,17 +4,12 @@
   "private": true,
   "workspaces": [
     "shared",
-    "frontend",
-    "mobile"
+    "frontend"
   ],
   "scripts": {
     "web": "npm run dev --workspace=frontend",
-    "mobile": "npm run start --workspace=mobile",
-    "mobile:android": "npm run android --workspace=mobile",
-    "mobile:ios": "npm run ios --workspace=mobile",
     "backend": "cd backend && uvicorn app.main:app --reload --port 8000",
-    "install:all": "npm install",
     "build:web": "npm run build --workspace=frontend"
   },
-  "description": "Ingredify — AI-powered food intelligence. Monorepo for web (React), mobile (Expo), and backend (FastAPI)."
+  "description": "Ingredify monorepo"
 }
