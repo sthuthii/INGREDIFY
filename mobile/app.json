@@ -3,6 +3,7 @@
     "name": "Ingredify",
     "slug": "ingredify",
     "version": "1.0.0",
+    "sdkVersion": "54.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "scheme": "ingredify",
@@ -43,7 +44,9 @@
           "photosPermission": "Ingredify needs access to your photos to scan food labels.",
           "cameraPermission": "Ingredify uses your camera to scan food labels."
         }
-      ]
+      ],
+      "expo-font",
+      "expo-secure-store"
     ],
     "experiments": {
       "typedRoutes": true
