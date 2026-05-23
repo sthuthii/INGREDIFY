@@ -1,15 +1,13 @@
 {
-  "name": "ingredify-monorepo",
+  "name": "ingredify",
   "version": "1.0.0",
   "private": true,
-  "workspaces": [
-    "shared",
-    "frontend"
-  ],
+  "description": "AI-Powered Personalized Food Intelligence Platform",
   "scripts": {
-    "web": "npm run dev --workspace=frontend",
-    "backend": "cd backend && uvicorn app.main:app --reload --port 8000",
-    "build:web": "npm run build --workspace=frontend"
-  },
-  "description": "Ingredify monorepo"
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && uvicorn app.main:app --reload --port 8000",
+    "install:frontend": "cd frontend && npm install",
+    "install:all": "cd frontend && npm install",
+    "build": "cd frontend && npm run build"
+  }
 }

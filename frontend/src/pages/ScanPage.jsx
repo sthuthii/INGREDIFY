@@ -71,15 +71,14 @@ export default function ScanPage() {
   }
 
   const handleAnalyze = () => {
-    if (!ocrResult) return
-    // Pass scan result to analyze page via router state
-    navigate('/analyze', {
-      state: {
-        ocrResult,
-        userProfile: profile,
-      },
-    })
-  }
+  if (!ocrResult) return
+  navigate('/analyze', {
+    state: {
+      ocrResult,
+      userProfile: profile,
+    },
+  })
+}
 
   const reset = () => {
     setImageFile(null)
@@ -226,6 +225,16 @@ export default function ScanPage() {
         </AnimatePresence>
 
       </div>
+      <button onClick={async () => {
+          const { auth } = await import('@/lib/firebase')
+          const token = await auth.currentUser.getIdToken()
+          console.log('TOKEN:', token)
+          navigator.clipboard.writeText(token)
+          alert('Token copied to clipboard!')
+}}>
+  Copy Auth Token
+</button>
     </div>
+    
   )
 }
